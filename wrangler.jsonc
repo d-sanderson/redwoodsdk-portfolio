@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "redwood-portfolio",
+  "main": "src/worker.tsx",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SESSION_DURABLE_OBJECT",
+        "class_name": "SessionDurableObject"
+      },
+      // {
+      //   "name": "REALTIME_DURABLE_OBJECT",
+      //   "class_name": "RealtimeDurableObject"
+      // }
+    ]
+  },
+  "vars": {
+    "WEBAUTHN_APP_NAME": "redwood-portfolio"
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "SessionDurableObject"
+      ]
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "redwood-portfolio-reluctant-mosquito",
+      "database_id": "654a33c3-e81d-4c21-8dcf-f8851d5fb6ff"
+    }
+  ]
+}
