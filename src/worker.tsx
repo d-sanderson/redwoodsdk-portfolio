@@ -57,6 +57,7 @@ export default defineApp([
     route("/", Home),
     route("/projects", Projects),
     route("/games", Games),
+    route("/games/:slug", Details),
     route("/resume", Resume),
     route("/projects/:slug", Details),
     // route("/protected", [

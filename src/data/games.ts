@@ -7,6 +7,7 @@ export const gamesData = [
     description: 'A platformer game built with Kaplay.',
     url: 'https://floor-is-lava-lyart.vercel.app/',
     tags: ['kaplay'],
+    slug: 'sludge-runners',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const gamesData = [
     description: 'A recreation of the classic game Battleship.',
     url: 'https://battleship-lyart-zeta.vercel.app/',
     tags: ['nextjs', 'tailwind', 'v0'],
+    slug: 'battleship',
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const gamesData = [
     description: 'A shareable collaborative grid for creating simple pixel art.',
     url: 'https://pixel-art-rosy-tau.vercel.app',
     tags: ['nextjs', 'partykit', 'tailwind'],
+    slug: 'collaborative-grid',
   },
   {
     id: 4,
@@ -28,5 +31,6 @@ export const gamesData = [
     description: 'Adventure time is a text-based choose your own adventure simulator that leverages Gemini Generative AI to craft a compelling custom adventure in the world of your choosing!',
     url: 'https://adventure-time-cyoa.vercel.app/',
     tags: ['astro', 'gemini ai'],
+    slug: 'adventure-time-cyoa',
   },
 ]
