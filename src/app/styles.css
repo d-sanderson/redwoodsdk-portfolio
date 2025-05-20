@@ -133,3 +133,7 @@ input:active + .design::after {
     transform: translate(0, 0px);
   }
 }
+
+@view-transition {
+  navigation: auto;
+}

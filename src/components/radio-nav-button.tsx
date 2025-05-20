@@ -1,5 +1,7 @@
 "use client";
 
+import { generateSlug } from "@/app/shared/utils";
+
 interface RadioNavButtonProps {
   title: string; // Used for display and to generate the href hash
   isToggle?: boolean; // For non-navigational toggle behavior
@@ -14,12 +16,6 @@ export default function RadioNavButton({
   isActive = false,
 }: RadioNavButtonProps) {
   // Generate a URL-friendly hash from the sectionId or title
-  const generateSlug = (text: string) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
-
   const slug = `/${generateSlug(title === "about" ? "/" : title)}`
 
   return (

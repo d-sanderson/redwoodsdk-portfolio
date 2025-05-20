@@ -6,6 +6,7 @@ export const projectsData = [
     url: 'https://credits.meowwolf.com/',
     tags: ['gatsby', 'airtable', 'tailwind'],
     slug: 'meow-wolf-credits-site',
+    type: 'project',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const projectsData = [
     url: 'https://tcmtechnique.vercel.app/',
     tags: ['gatsby', 'material-ui'],
     slug: 'tcm-technique',
+    type: 'project',
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const projectsData = [
     repo: 'https://github.com/imbrikis/intersections', // if no repo, the button will not show up
     tags: ['d3', 'react', 'tailwind', 'airtable'],
     slug: 'intersections',
+    type: 'project',
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const projectsData = [
     url: 'https://mew-two.vercel.app',
     tags: ['airtable', 'nextjs', 'tailwind'],
     slug: 'meow-wolf-credits-site-proof-of-concept',
+    type: 'project',
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const projectsData = [
     url: 'https://jamieburnes.com/',
     tags: ['gatsby', 'tailwindcss', 'netlify-cms'],
     slug: 'jamie-burnes-sculpture',
+    type: 'project',
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const projectsData = [
     description: 'I built a site that generated web pages for Mortgage Officers based on information queried from Microsoft Sharepoint',
     tags: ['gatsby', 'tailwindcss', 'sharepoint'],
     slug: 'mortgage-website-generator',
+    type: 'project',
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const projectsData = [
     url: 'https://simonsfirm.com/',
     tags: ['gatsby', 'tailwindcss', 'netlify-cms'],
     slug: 'simons-firm',
+    type: 'project',
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const projectsData = [
     url: 'https://rasmaterialsllc.com/',
     tags: ['gatsby', 'formik', 'netlify-cms'],
     slug: 'ras-materials',
+    type: 'project',
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ export const projectsData = [
     repo: 'https://github.com/d-sanderson/precision', // if no repo, the button will not show up
     tags: ['puppeteer', 'node'],
     slug: 'precision',
+    type: 'project',
   },
   {
     id: 10,
@@ -80,6 +89,7 @@ export const projectsData = [
     repo: 'https://github.com/d-sanderson/whereto-react', // if no repo, the button will not show up
     tags: ['create-react-app', 'google-maps-api', 'mongoose'],
     slug: 'whereto-react',
+    type: 'project',
   },
   {
     id: 11,
@@ -90,6 +100,7 @@ export const projectsData = [
     repo: 'https://github.com/d-sanderson/gatsby-source-pokemons', // if no repo, the button will not show up
     tags: ['Gatsby', 'GraphQL', 'Tailwindcss'],
     slug: 'gatsby-source-pokemons',
+    type: 'project',
   },
   {
     id: 12,
@@ -99,5 +110,6 @@ export const projectsData = [
     repo: 'https://github.com/d-sanderson/under-construction-activatenm', // if no repo, the button will not show up
     tags: ['Gatsby', 'gatsby themes'],
     slug: 'activate-new-mexico-landing-page',
+    type: 'project',
   },
 ]

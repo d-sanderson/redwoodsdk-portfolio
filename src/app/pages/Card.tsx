@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { generateSlug } from '../shared/utils';
 
 interface Props {
   title: string;
@@ -45,7 +46,9 @@ export const Card: FunctionComponent<Props> = ({
           ))}
         </div>
       )}
-      <h3 className="text-2xl font-bold text-center my-4 text-gray-900 dark:text-gray-100">{title}</h3>
+      <a href={`/projects/${generateSlug(title)}`} className="block">
+      <h3 className="text-2xl font-bold text-center my-4 text-gray-900 dark:text-gray-100">{title.toLowerCase()}</h3>
+      </a>
       {description && (
         <div
           className="my-2 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert prose-a:text-pink-600 hover:prose-a:text-pink-700 dark:prose-a:text-pink-400 dark:hover:prose-a:text-pink-300" // Using Tailwind Typography for prose styling

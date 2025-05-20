@@ -8,6 +8,7 @@ export const gamesData = [
     url: 'https://floor-is-lava-lyart.vercel.app/',
     tags: ['kaplay'],
     slug: 'sludge-runners',
+    type: 'game',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const gamesData = [
     url: 'https://battleship-lyart-zeta.vercel.app/',
     tags: ['nextjs', 'tailwind', 'v0'],
     slug: 'battleship',
+    type: 'game',
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const gamesData = [
     url: 'https://pixel-art-rosy-tau.vercel.app',
     tags: ['nextjs', 'partykit', 'tailwind'],
     slug: 'collaborative-grid',
+    type: 'game',
   },
   {
     id: 4,
@@ -32,5 +35,6 @@ export const gamesData = [
     url: 'https://adventure-time-cyoa.vercel.app/',
     tags: ['astro', 'gemini ai'],
     slug: 'adventure-time-cyoa',
+    type: 'game',
   },
 ]
