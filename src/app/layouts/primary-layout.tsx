@@ -20,7 +20,6 @@ export default function PrimaryLayout({
 }>) {
   return (
     <body className={`relative font-body`}>
-      {slug}
       <main className="min-h-screen bg-[#e6eef5] dark:bg-gray-900 flex flex-col items-center pt-16 px-4 transition-colors duration-200 dark:text-gray-100">
         {includeHeader && (
           <>
