@@ -27,13 +27,12 @@ export default defineApp([
   async ({ ctx, request, headers }) => {
     await setupDb(env);
     setupSessionStore(env);
-    const slug =
-      request.url === "/"
-        ? request.url
-        : request?.url.split("/").pop()?.replace("/", "");
-    ctx.slug = slug || null;
+    const slug = request?.url.split("/").pop() || "/";
+    // Set up the context
     ctx.hits = 0;
-    if (ctx.slug) {
+    console.log("slug", slug);
+    if (slug) {
+      ctx.slug  = slug;
       // Increment the count field by 1
       const { count } = await db.pageHit.upsert({
         where: { slug: ctx.slug },
