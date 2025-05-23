@@ -6,7 +6,7 @@ import { Card } from "./Card";
 
 export const Projects = ({ ctx }: RequestInfo) => {
   return (
-    <PrimaryLayout slug={ctx.slug}>
+    <PrimaryLayout slug={ctx.slug} hits={ctx.hits}>
       <h1 className="text-2xl text-center">Projects</h1>
       {projectsData.map((project) => (
         <Card {...project} key={project.slug}/>

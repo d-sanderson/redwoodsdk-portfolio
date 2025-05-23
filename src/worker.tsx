@@ -19,16 +19,37 @@ export type AppContext = {
   session: Session | null;
   user: User | null;
   slug: string | null;
+  hits: number;
 };
-
 
 export default defineApp([
   setCommonHeaders(),
   async ({ ctx, request, headers }) => {
     await setupDb(env);
     setupSessionStore(env);
-    const slug = request.url === "/" ? request.url: request?.url.split("/").pop()?.replace("/", "");
+    const slug =
+      request.url === "/"
+        ? request.url
+        : request?.url.split("/").pop()?.replace("/", "");
     ctx.slug = slug || null;
+    ctx.hits = 0;
+    if (ctx.slug) {
+      // Increment the count field by 1
+      const { count } = await db.pageHit.upsert({
+        where: { slug: ctx.slug },
+        create: {
+          slug: ctx.slug,
+          count: 1
+        },
+        update: {
+          count: {
+            increment: 1
+          }
+        }
+      })
+
+      ctx.hits = count;
+    }
     try {
       ctx.session = await sessions.load(request);
     } catch (error) {
