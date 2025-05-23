@@ -5,7 +5,7 @@ import PrimaryLayout from "../layouts/primary-layout";
 export function Home({ ctx }: RequestInfo) {
   const slug = ctx?.slug
   return (
-    <PrimaryLayout slug={slug}>
+    <PrimaryLayout slug={slug} hits={ctx.hits}>
       {/* Content */}
       {/* <div className="max-w-md"> */}
         <h3 className="text-2xl font-mono my-4 text-gray-800 dark:text-gray-100">

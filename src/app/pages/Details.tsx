@@ -4,12 +4,12 @@ import PrimaryLayout from "../layouts/primary-layout";
 import { Card } from "./Card";
 import { gamesData } from "@/data/games";
 
-export const Details = async ({ params }: RequestInfo) => {
+export const Details = async ({ params, ctx }: RequestInfo) => {
   const slug = params.slug;
   const project = [...projectsData, ...gamesData].find((project) => project.slug === slug);
   const type = project?.type;
   return (
-    <PrimaryLayout slug={null} includeNavivation={false} includeHeader={false}>
+    <PrimaryLayout slug={params.slug} includeNavivation={false} includeHeader={false} hits={ctx?.hits}>
       <a href={`/${type}s`}>back to {type}s</a>
       <Card {...project} title={params.slug} />
     </PrimaryLayout>

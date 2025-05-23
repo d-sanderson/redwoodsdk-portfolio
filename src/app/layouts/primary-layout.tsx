@@ -1,5 +1,7 @@
 "use client";
+
 import type React from "react";
+import RetroHitCounter from "react-retro-hit-counter";
 import "./primary-layout";
 import Navigation from "@/components/navigation";
 
@@ -8,11 +10,13 @@ export default function PrimaryLayout({
   children,
   includeNavivation = true,
   includeHeader = true,
+  hits = 0,
 }: Readonly<{
   children: React.ReactNode;
   slug: string | null;
   includeNavivation?: boolean;
   includeHeader?: boolean;
+  hits: number
 }>) {
   return (
     <body className={`relative font-body`}>
@@ -29,6 +33,25 @@ export default function PrimaryLayout({
         {includeNavivation && <Navigation slug={slug} />}
         <div className="max-w-md">{children}</div>
       </main>
+      <footer className="w-full text-center py-4 bg-[#e6eef5] dark:bg-gray-900">
+        <RetroHitCounter
+          hits={hits}
+          /* The following are all default values: */
+          withBorder={true}
+          withGlow={true}
+          minLength={4}
+          size={40}
+          padding={4}
+          digitSpacing={3}
+          segmentThickness={4}
+          segmentSpacing={0.5}
+          segmentActiveColor="#76FF03"
+          segmentInactiveColor="#315324"
+          backgroundColor="#222222"
+          borderThickness={7}
+          glowStrength={0.5}
+        />
+      </footer>
     </body>
   );
 }

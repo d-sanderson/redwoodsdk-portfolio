@@ -33,6 +33,7 @@
     "@simplewebauthn/browser": "^13.1.0",
     "@simplewebauthn/server": "^13.1.1",
     "@tailwindcss/vite": "^4.1.7",
+    "react-retro-hit-counter": "^1.0.1",
     "rwsdk": "0.0.83",
     "tailwindcss": "^4.1.7"
   },

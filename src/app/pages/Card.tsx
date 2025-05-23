@@ -47,7 +47,12 @@ export const Card: FunctionComponent<Props> = ({
         </div>
       )}
       <a href={`/projects/${generateSlug(title)}`} className="block">
-      <h3 className="text-2xl font-bold text-center my-4 text-gray-900 dark:text-gray-100">{title.toLowerCase()}</h3>
+      <h3
+        className="text-2xl font-bold text-center my-4 text-gray-900 dark:text-gray-100"
+        style={{ viewTransitionName: `project-title-${generateSlug(title)}` }}
+      >
+        {title.toLowerCase()}
+      </h3>
       </a>
       {description && (
         <div

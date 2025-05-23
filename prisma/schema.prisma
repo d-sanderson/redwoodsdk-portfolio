@@ -36,3 +36,13 @@ model Credential {
   @@index([credentialId])
   @@index([userId])
 }
+
+model PageHit {
+  id       String   @id @default(uuid()) // Internal DB ID
+  count    Int      @default(0) // Number of hits
+  slug     String   @unique // Slug for the page
+  createdAt DateTime @default(now()) // Timestamp of the first hit
+  updatedAt DateTime @updatedAt // Timestamp of the last hit
+  @@index([slug])
+
+}
