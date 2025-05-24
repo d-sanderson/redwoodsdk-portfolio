@@ -13,7 +13,7 @@ export default function Navigation({ className, slug }: NavigationProps) {
       <RadioNavButton
         title="about"
         color="#FF5A5A" // Red
-        isActive={slug === null}
+        isActive={slug === "/"}
       />
       <RadioNavButton
         title="projects"

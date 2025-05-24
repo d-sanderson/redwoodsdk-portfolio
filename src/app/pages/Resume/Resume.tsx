@@ -174,10 +174,10 @@ export const Resume = ({ ctx }: RequestInfo) => {
             >
               {/* Avatar */}
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                className={`w-8 h-8 rounded-full flex items-center justify-center p-2 ${
                   message.sender === "user"
                     ? "bg-blue-500 text-white"
-                    : "bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+                    : "bg-gray-200 dark:bg-gray-800 text-pink-500 dark:text-gray-300"
                 }`}
               >
                 {message.sender === "user" ? (
