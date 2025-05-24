@@ -32,14 +32,14 @@ export default function PrimaryLayout({
         {includeNavivation && <Navigation slug={slug} />}
         <div className="max-w-md">{children}</div>
       </main>
-      <footer className="w-full text-center py-4 bg-[#e6eef5] dark:bg-gray-900">
+      <footer className="w-full text-center py-8 bg-[#e6eef5] dark:bg-gray-900">
         <RetroHitCounter
           hits={hits}
           /* The following are all default values: */
-          withBorder={true}
-          withGlow={true}
+          // withBorder={true}
+          // withGlow={true}
           minLength={4}
-          size={40}
+          size={20}
           padding={4}
           digitSpacing={3}
           segmentThickness={4}
