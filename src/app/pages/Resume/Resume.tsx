@@ -142,11 +142,11 @@ export const Resume = ({ ctx }: RequestInfo) => {
   return (
     <PrimaryLayout slug={ctx.slug} hits={ctx.hits}> 
       <h1 className="text-2xl text-center">Resume</h1>
-      <div className="mt-5 max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="mt-5 max-w-2xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
         {/* Chat Header */}
-        <div className="bg-gray-50 dark:bg-gray-700 px-4 py-3 border-b border-gray-200 dark:border-gray-600">
+        <div className="bg-gray-50 dark:bg-gray-900 px-4 py-3 border-b border-gray-200 dark:border-gray-600">
           <div className="flex items-center gap-2">
-            <MessageCircle className="w-5 h-5 text-blue-500" />
+            <MessageCircle className="w-5 h-5 text-pink-500" />
             <h4 className="font-mono text-sm font-medium text-gray-800 dark:text-gray-200">
               Resume Assistant
             </h4>
@@ -177,7 +177,7 @@ export const Resume = ({ ctx }: RequestInfo) => {
                 className={`w-8 h-8 rounded-full flex items-center justify-center ${
                   message.sender === "user"
                     ? "bg-blue-500 text-white"
-                    : "bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
+                    : "bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
                 }`}
               >
                 {message.sender === "user" ? (
@@ -192,7 +192,7 @@ export const Resume = ({ ctx }: RequestInfo) => {
                 className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg font-mono text-sm ${
                   message.sender === "user"
                     ? "bg-blue-500 text-white rounded-br-none"
-                    : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-bl-none"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-bl-none"
                 }`}
               >
                 <p className="whitespace-pre-wrap">
@@ -223,7 +223,7 @@ export const Resume = ({ ctx }: RequestInfo) => {
         </div>
 
         {/* Suggested Questions */}
-        <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700">
+        <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900">
           <p className="text-xs font-mono text-gray-600 dark:text-gray-400 mb-2">
             Suggested questions:
           </p>
@@ -233,7 +233,7 @@ export const Resume = ({ ctx }: RequestInfo) => {
                 key={index}
                 onClick={() => handleQuestionClick(question)}
                 disabled={isLoading}
-                className="px-3 py-1 text-xs font-mono bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                className="px-3 py-1 text-xs font-mono bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
               >
                 {question}
               </button>
@@ -250,13 +250,13 @@ export const Resume = ({ ctx }: RequestInfo) => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Ask about David's experience..."
-              className="flex-1 px-3 py-2 font-mono text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-3 py-2 font-mono text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={!inputValue.trim() || isLoading}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
+              className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
             >
               {isLoading ? (
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
