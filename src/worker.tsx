@@ -3,7 +3,6 @@ import { route, render, prefix } from "rwsdk/router";
 import { Document } from "@/app/Document";
 import { Home } from "@/app/pages/Home";
 import { setCommonHeaders } from "@/app/headers";
-import { userRoutes } from "@/app/pages/user/routes";
 import { sessions, setupSessionStore } from "./session/store";
 import { Session } from "./session/durableObject";
 import { db, setupDb } from "./db";
@@ -11,7 +10,7 @@ import type { User } from "@prisma/client";
 import { env } from "cloudflare:workers";
 import { Projects } from "@/app/pages/Projects";
 import { Games } from "@/app/pages/Games";
-import { Resume } from "@/app/pages/Resume";
+import { Resume } from "@/app/pages/Resume/Resume";
 import { Details } from "./app/pages/Details";
 export { SessionDurableObject } from "./session/durableObject";
 
@@ -30,7 +29,6 @@ export default defineApp([
     const slug = request?.url.split("/").pop() || "/";
     // Set up the context
     ctx.hits = 0;
-    console.log("slug", slug);
     if (slug) {
       ctx.slug  = slug;
       // Increment the count field by 1

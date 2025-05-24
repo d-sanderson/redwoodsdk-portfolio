@@ -2,7 +2,6 @@
 
 import type React from "react";
 import RetroHitCounter from "react-retro-hit-counter";
-import "./primary-layout";
 import Navigation from "@/components/navigation";
 
 export default function PrimaryLayout({
@@ -19,7 +18,7 @@ export default function PrimaryLayout({
   hits: number
 }>) {
   return (
-    <body className={`relative font-body`}>
+    <div className={`relative font-body`}>
       <main className="min-h-screen bg-[#e6eef5] dark:bg-gray-900 flex flex-col items-center pt-16 px-4 transition-colors duration-200 dark:text-gray-100">
         {includeHeader && (
           <>
@@ -52,6 +51,6 @@ export default function PrimaryLayout({
           glowStrength={0.5}
         />
       </footer>
-    </body>
+    </div>
   );
 }
